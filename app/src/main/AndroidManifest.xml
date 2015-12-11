@@ -33,6 +33,9 @@
 
         <activity android:name=".TutorialPart5.TutorialPart5">
         </activity>
+
+        <activity android:name=".TutorialPart6.TutorialPart6">
+        </activity>
     </application>
 
 </manifest>
