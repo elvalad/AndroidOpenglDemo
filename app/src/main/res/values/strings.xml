@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OpenglDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_opengldemo_tutorial1">Tutorial1</string>
+    <string name="button_opengldemo_tutorial2">Tutorial2</string>
+    <string name="button_opengldemo_tutorial3">Tutorial3</string>
+    <string name="button_opengldemo_tutorial4">Tutorial4</string>
+</resources>
