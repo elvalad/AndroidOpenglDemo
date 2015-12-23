@@ -24,6 +24,7 @@ public class OpenGLPoint {
         vertex.put(vertexArray);
         vertex.position(0);
 
+        clearCreen(gl);
         // 使用glColor4f(float red, float green, float blue, float alpha) 将当前颜色设为红色
         gl.glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
         // glPointSize(float size) 可以用来设置绘制点的大小
@@ -39,5 +40,10 @@ public class OpenGLPoint {
         gl.glDrawArrays(GL10.GL_POINTS, 0, 3);
 
         gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);
+    }
+
+    private void clearCreen(GL10 gl) {
+        gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
     }
 }

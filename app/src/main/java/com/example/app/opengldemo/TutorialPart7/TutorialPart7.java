@@ -1,4 +1,4 @@
-package com.example.app.opengldemo.TutorialPart3;
+package com.example.app.opengldemo.TutorialPart7;
 
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
@@ -6,16 +6,16 @@ import android.os.Bundle;
 import android.view.Window;
 
 /**
- * Created by Administrator on 2015/12/10.
+ * Created by Administrator on 2015/12/23.
  */
-public class TutorialPart3 extends Activity {
+public class TutorialPart7 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        GLSurfaceView glSurfaceView = new GLSurfaceView(this);
-        glSurfaceView.setRenderer(new OpenGLRender(new IOpenGLDemo()));
+        final GLSurfaceView glSurfaceView = new GLSurfaceView(this);
+        final OpenGLIcosa openGLIcosa = new OpenGLIcosa();
+        glSurfaceView.setRenderer(new OpenGLRender(openGLIcosa));
         setContentView(glSurfaceView);
     }
 }

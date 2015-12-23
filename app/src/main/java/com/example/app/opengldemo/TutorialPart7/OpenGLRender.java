@@ -1,18 +1,18 @@
-package com.example.app.opengldemo.TutorialPart6;
+package com.example.app.opengldemo.TutorialPart7;
 
 import android.opengl.GLSurfaceView;
 import android.opengl.GLU;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
- * Created by Administrator on 2015/12/11.
+ * Created by Administrator on 2015/12/23.
  */
 public class OpenGLRender implements GLSurfaceView.Renderer {
-
-    private OpenGLTriangle openGLTriangle;
-    public OpenGLRender(OpenGLTriangle glTriangle) {
-        openGLTriangle = glTriangle;
+    private OpenGLIcosa openGLIcosa;
+    public OpenGLRender(OpenGLIcosa openGLIcosa) {
+        this.openGLIcosa = openGLIcosa;
     }
 
     @Override
@@ -33,24 +33,18 @@ public class OpenGLRender implements GLSurfaceView.Renderer {
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-        // Sets the current view port to the new size
         gl.glViewport(0, 0, width, height);
-        // Select the projection matrix
         gl.glMatrixMode(GL10.GL_PROJECTION);
-        // Reset the projection matrix
         gl.glLoadIdentity();
-        // Calculate the aspect ratio of the window
         GLU.gluPerspective(gl, 45.0f, (float) width / (float) height, 0.1f, 100.0f);
-        // Select the modelview matrix
         gl.glMatrixMode(GL10.GL_MODELVIEW);
-        // Reset the modelview matrix
         gl.glLoadIdentity();
     }
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        if (openGLTriangle != null) {
-            openGLTriangle.drawTriangle(gl);
+        if (null != openGLIcosa) {
+            openGLIcosa.drawIcosa(gl);
         }
     }
 }

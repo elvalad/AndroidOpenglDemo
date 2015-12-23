@@ -16,7 +16,6 @@ public class TutorialPart6 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         final GLSurfaceView glSurfaceView = new GLSurfaceView(this);
