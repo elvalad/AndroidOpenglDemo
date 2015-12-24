@@ -18,6 +18,7 @@ import com.example.app.opengldemo.TutorialPart4.TutorialPart4;
 import com.example.app.opengldemo.TutorialPart5.TutorialPart5;
 import com.example.app.opengldemo.TutorialPart6.TutorialPart6;
 import com.example.app.opengldemo.TutorialPart7.TutorialPart7;
+import com.example.app.opengldemo.TutorialPart8.TutorialPart8;
 
 public class MainActivity extends AppCompatActivity {
     private Button tutorialButton1;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button tutorialButton5;
     private Button tutorialButton6;
     private Button tutorialButton7;
+    private Button tutorialButton8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +131,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TutorialPart7.class);
+                startActivity(intent);
+            }
+        });
+
+        tutorialButton8 = (Button) findViewById(R.id.opengl_demo_tutorial8);
+        tutorialButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TutorialPart8.class);
                 startActivity(intent);
             }
         });

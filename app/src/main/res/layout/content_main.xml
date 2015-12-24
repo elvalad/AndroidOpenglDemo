@@ -61,4 +61,13 @@
         android:layout_below="@+id/opengl_demo_tutorial4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/opengl_demo_tutorial8"
+        android:text="@string/button_opengldemo_tutorial8"
+        android:layout_toRightOf="@+id/opengl_demo_tutorial7"
+        android:layout_below="@+id/opengl_demo_tutorial5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
